@@ -1,0 +1,558 @@
+[mchan@ii95-50322 (22:41:35) ~/mchan2/test]$ ./ps_tree.pl
+  PID  COMMAND
+    2  [kthreadd]
+    3   \_ [migration/0]
+    4   \_ [ksoftirqd/0]
+    5   \_ [stopper/0]
+    6   \_ [watchdog/0]
+    7   \_ [migration/1]
+    8   \_ [stopper/1]
+    9   \_ [ksoftirqd/1]
+   10   \_ [watchdog/1]
+   11   \_ [events/0]
+   12   \_ [events/1]
+   13   \_ [cgroup]
+   14   \_ [khelper]
+   15   \_ [netns]
+   16   \_ [async/mgr]
+   17   \_ [pm]
+   18   \_ [sync_supers]
+   19   \_ [bdi-default]
+   20   \_ [kintegrityd/0]
+   21   \_ [kintegrityd/1]
+   22   \_ [kblockd/0]
+   23   \_ [kblockd/1]
+   24   \_ [kacpid]
+   25   \_ [kacpi_notify]
+   26   \_ [kacpi_hotplug]
+   27   \_ [ata_aux]
+   28   \_ [ata_sff/0]
+   29   \_ [ata_sff/1]
+   30   \_ [ksuspend_usbd]
+   31   \_ [khubd]
+   32   \_ [kseriod]
+   33   \_ [md/0]
+   34   \_ [md/1]
+   35   \_ [md_misc/0]
+   36   \_ [md_misc/1]
+   37   \_ [linkwatch]
+   39   \_ [khungtaskd]
+   40   \_ [kswapd0]
+   41   \_ [ksmd]
+   42   \_ [khugepaged]
+   43   \_ [aio/0]
+   44   \_ [aio/1]
+   45   \_ [crypto/0]
+   46   \_ [crypto/1]
+   54   \_ [kthrotld/0]
+   55   \_ [kthrotld/1]
+   57   \_ [kpsmoused]
+   58   \_ [usbhid_resumer]
+   59   \_ [deferwq]
+   91   \_ [kdmremove]
+   92   \_ [kstriped]
+  163   \_ [scsi_eh_0]
+  164   \_ [scsi_eh_1]
+  231   \_ [hv_vmbus_con/0]
+  232   \_ [hv_vmbus_con/1]
+  234   \_ [hv_vmbus_ctl/0]
+  235   \_ [hv_vmbus_ctl/1]
+  236   \_ [hv_vmbus_ctl/0]
+  237   \_ [hv_vmbus_ctl/1]
+  238   \_ [hv_vmbus_ctl/0]
+  239   \_ [hv_vmbus_ctl/1]
+  240   \_ [hv_vmbus_ctl/0]
+  241   \_ [hv_vmbus_ctl/1]
+  242   \_ [hv_vmbus_ctl/0]
+  243   \_ [hv_vmbus_ctl/1]
+  244   \_ [hv_vmbus_ctl/0]
+  245   \_ [hv_vmbus_ctl/1]
+  246   \_ [hv_vmbus_ctl/0]
+  247   \_ [hv_vmbus_ctl/1]
+  250   \_ [hv_vmbus_ctl/0]
+  251   \_ [hv_vmbus_ctl/1]
+  252   \_ [hv_vmbus_ctl/0]
+  253   \_ [hv_vmbus_ctl/1]
+  254   \_ [hv_vmbus_ctl/0]
+  255   \_ [hv_vmbus_ctl/1]
+  256   \_ [hv_vmbus_ctl/0]
+  257   \_ [hv_vmbus_ctl/1]
+  258   \_ [hv_vmbus_ctl/0]
+  259   \_ [hv_vmbus_ctl/1]
+  260   \_ [hv_vmbus_ctl/0]
+  261   \_ [hv_vmbus_ctl/1]
+  262   \_ [hv_vmbus_ctl/0]
+  263   \_ [hv_vmbus_ctl/1]
+  272   \_ [scsi_eh_2]
+  274   \_ [scsi_eh_3]
+  321   \_ [kdmflush]
+  323   \_ [kdmflush]
+  341   \_ [flush-253:0]
+  342   \_ [jbd2/dm-0-8]
+  343   \_ [ext4-dio-unwrit]
+  615   \_ [hv_vmbus_ctl/0]
+  616   \_ [hv_vmbus_ctl/1]
+  620   \_ [hv_vmbus_ctl/0]
+  621   \_ [hv_vmbus_ctl/1]
+  699   \_ [hv_vmbus_ctl/0]
+  700   \_ [hv_vmbus_ctl/1]
+  722   \_ [jbd2/sda1-8]
+  723   \_ [ext4-dio-unwrit]
+  813   \_ [kauditd]
+Deep recursion on subroutine "main::traverse_tree" at ./ps_tree.pl line 203.
+ 1268   \_ [cqueue]
+ 1470   \_ [rpciod/0]
+ 1471   \_ [rpciod/1]
+ 1473   \_ [kslowd000]
+ 1474   \_ [kslowd001]
+ 1475   \_ [nfsiod]
+ 1476   \_ [lockd]
+    1  /sbin/init
+  422  /sbin/udevd -d
+  688   \_ /sbin/udevd -d
+  703   \_ /sbin/udevd -d
+ 1103  auditd
+ 1123  /usr/sbin/nslcd
+ 1137  /sbin/rsyslogd -i /var/run/syslogd.pid -c 5
+ 1163  rpcbind
+ 1183  rpc.statd
+ 1212  dbus-daemon --system
+ 1265  /usr/sbin/hv_kvp_daemon
+ 1287  /usr/sbin/hv_vss_daemon
+ 1307  automount --pid-file /var/run/autofs.pid
+ 1327  /usr/sbin/nscd
+ 1375  ntpd -u ntp:ntp -p /var/run/ntpd.pid -g
+ 1452  /usr/libexec/postfix/master
+ 1462   \_ qmgr -l -t fifo -u
+32354   \_ pickup -l -t fifo -u
+ 1486  /usr/sbin/httpd -D SSL -D VDEVBOX
+ 1597   \_ /usr/sbin/httpd -D SSL -D VDEVBOX
+ 1598   \_ /usr/sbin/httpd -D SSL -D VDEVBOX
+ 1599   \_ /usr/sbin/httpd -D SSL -D VDEVBOX
+ 1600   \_ /usr/sbin/httpd -D SSL -D VDEVBOX
+ 1601   \_ /usr/sbin/httpd -D SSL -D VDEVBOX
+ 1602   \_ /usr/sbin/httpd -D SSL -D VDEVBOX
+ 1604   \_ /usr/sbin/httpd -D SSL -D VDEVBOX
+ 1606   \_ /usr/sbin/httpd -D SSL -D VDEVBOX
+ 1567  /opt/SumoCollector/./wrapper /opt/SumoCollector/./config/wrapper.conf wrapper.syslog.ident=collector wrapper.pidfile=/opt/SumoCollector/./collector.pid wrapper.name=collector wrapper.displayname=SumoLogic Collector wrapper.daemonize=TRUE wrapper.statusfile=/opt/SumoCollector/./collector.status wrapper.java.statusfile=/opt/SumoCollector/./collector.java.status wrapper.lockfile=/var/lock/subsys/collector
+ 1569   \_ /opt/SumoCollector/jre/bin/java -XX:+UseParallelGC -server -Xms64m -Xmx128m -Djava.library.path=./19.209-8/bin/native/lib -classpath ./19.209-8/lib/aether-api-0.9.0.M3.jar:./19.209-8/lib/aether-util-0.9.0.M3.jar:./19.209-8/lib/ant-1.8.4.jar:./19.209-8/lib/ant-launcher-1.8.4.jar:./19.209-8/lib/aopalliance-repackaged-2.4.0-b34.jar:./19.209-8/lib/avro-1.8.1.jar:./19.209-8/lib/avro-ipc-1.8.1.jar:./19.209-8/lib/avrox-19.209-1.jar:./19.209-8/lib/backport-util-concurrent-3.1.jar:./19.209-8/lib/bcpkix-jdk15on-1.54.jar:./19.209-8/lib/bcprov-jdk15on-1.54.jar:./19.209-8/lib/c3p0-0.9.1.1.jar:./19.209-8/lib/classworlds-1.1.jar:./19.209-8/lib/collector-19.209-8.jar:./19.209-8/lib/collector-base-19.209-1.jar:./19.209-8/lib/collector-interchange-19.209-1.jar:./19.209-8/lib/collector-native-19.209-1.jar:./19.209-8/lib/collector-util-19.209-1.jar:./19.209-8/lib/commons-cli-1.2.jar:./19.209-8/lib/commons-codec-1.10.jar:./19.209-8/lib/commons-collections-3.2.2.jar:./19.209-8/lib/commons-compress-1.12.jar:./19.209-8/lib/commons-configuration-1.10.jar:./19.209-8/lib/commons-daemon-1.0.1.jar:./19.209-8/lib/commons-httpclient-3.1.jar:./19.209-8/lib/commons-io-2.4.jar:./19.209-8/lib/commons-lang-2.6.jar:./19.209-8/lib/commons-logging-1.2.jar:./19.209-8/lib/docker-java-3.0.13.jar:./19.209-8/lib/dom4j-1.6.1.jar:./19.209-8/lib/doxia-logging-api-1.1.jar:./19.209-8/lib/doxia-sink-api-1.1.jar:./19.209-8/lib/ecc-25519-java-1.0.1.jar:./19.209-8/lib/guava-16.0.1.jar:./19.209-8/lib/hk2-api-2.4.0-b34.jar:./19.209-8/lib/hk2-locator-2.4.0-b34.jar:./19.209-8/lib/hk2-utils-2.4.0-b34.jar:./19.209-8/lib/httpclient-4.5.2.jar:./19.209-8/lib/httpcore-4.4.4.jar:./19.209-8/lib/install4j-maven-plugin-1.0.7.jar:./19.209-8/lib/jackrabbit-jcr-commons-1.5.0.jar:./19.209-8/lib/jackrabbit-webdav-1.5.0.jar:./19.209-8/lib/jackson-annotations-2.7.2.jar:./19.209-8/lib/jackson-core-2.7.2.jar:./19.209-8/lib/jackson-core-asl-1.9.13.jar:./19.209-8/lib/jackson-databind-2.7.2.jar:./19.209-8/lib/jackson-jaxrs-base-2.6.4.jar:./19.209-8/lib/jackson-jaxrs-json-provider-2.6.4.jar:./19.209-8/lib/jackson-mapper-asl-1.9.13.jar:./19.209-8/lib/jackson-module-jaxb-annotations-2.6.4.jar:./19.209-8/lib/jacob-1.18.jar:./19.209-8/lib/jasypt-1.7.jar:./19.209-8/lib/javassist-3.18.1-GA.jar:./19.209-8/lib/javax.annotation-api-1.2.jar:./19.209-8/lib/javax.inject-2.4.0-b34.jar:./19.209-8/lib/javax.servlet-api-3.1.0.jar:./19.209-8/lib/javax.ws.rs-api-2.0.1.jar:./19.209-8/lib/jcifs-1.3.17.jar:./19.209-8/lib/jcl-over-slf4j-1.7.21.jar:./19.209-8/lib/jersey-apache-connector-2.23.1.jar:./19.209-8/lib/jersey-client-2.23.1.jar:./19.209-8/lib/jersey-common-2.23.1.jar:./19.209-8/lib/jersey-guava-2.23.1.jar:./19.209-8/lib/jinterop-2.0.8.2.jar:./19.209-8/lib/jinterop-deps-2.0.8.2.jar:./19.209-8/lib/jna-3.3.0-platform.jar:./19.209-8/lib/jna-3.3.0.jar:./19.209-8/lib/joda-convert-1.8.1.jar:./19.209-8/lib/joda-time-2.9.3.jar:./19.209-8/lib/jsch-0.1.38.jar:./19.209-8/lib/json4s-ast_2.11-3.4.0-SUMO.jar:./19.209-8/lib/json4s-core_2.11-3.4.0-SUMO.jar:./19.209-8/lib/json4s-native_2.11-3.4.0-SUMO.jar:./19.209-8/lib/json4s-scalap_2.11-3.4.0-SUMO.jar:./19.209-8/lib/jsr305-3.0.1.jar:./19.209-8/lib/junixsocket-common-2.0.4.jar:./19.209-8/lib/junixsocket-native-common-2.0.4.jar:./19.209-8/lib/jzlib-1.1.3.jar:./19.209-8/lib/log4j-1.2.17.jar:./19.209-8/lib/maven-artifact-2.2.1.jar:./19.209-8/lib/maven-artifact-manager-2.2.1.jar:./19.209-8/lib/maven-core-2.2.1.jar:./19.209-8/lib/maven-error-diagnostics-2.2.1.jar:./19.209-8/lib/maven-model-2.2.1.jar:./19.209-8/lib/maven-monitor-2.2.1.jar:./19.209-8/lib/maven-plugin-annotations-3.1.jar:./19.209-8/lib/maven-plugin-api-2.2.1.jar:./19.209-8/lib/maven-plugin-descriptor-2.2.1.jar:./19.209-8/lib/maven-plugin-parameter-documenter-2.2.1.jar:./19.209-8/lib/maven-plugin-registry-2.2.1.jar:./19.209-8/lib/maven-profile-2.2.1.jar:./19.209-8/lib/maven-project-2.2.1.jar:./19.209-8/lib/maven-reporting-api-2.2.1.jar:./19.209-8/lib/maven-repository-metadata-2.2.1.jar:./19.209-8/lib/maven-settings-2.2.1.jar:./19.209-8/lib/metrics-core-3.1.0.jar:./19.209-8/lib/metrics-graphite-3.1.0.jar:./19.209-8/lib/met
+ 1649  crond
+ 1716   \_ CROND
+ 1723   |   \_ /bin/sh -c /admin/code/live_cd.git/site/bin/service/messaging_local_queue.pl > /tmp/messaging_local_queue_startup_log.log 2>&1
+ 1731   |       \_ /usr/bin/perl /admin/code/live_cd.git/site/bin/service/messaging_local_queue.pl
+32051   \_ CROND
+32053   |   \_ /bin/sh -c /admin/code/live_cd.git/site/bin/service/messaging_file_queue.pl > /tmp/messaging_file_queue_startup_log.log 2>&1
+32057   |       \_ /usr/bin/perl /admin/code/live_cd.git/site/bin/service/messaging_file_queue.pl
+32911   \_ CROND
+32917   |   \_ /bin/sh -c /usr/local/bb_local/site/bin/monitor/bb_local.pl --check=nfs > /tmp/bb_local.pl.nfs.log 2>&1
+32926   |       \_ /usr/bin/perl /usr/local/bb_local/site/bin/monitor/bb_local.pl --check=nfs
+32912   \_ CROND
+32915   |   \_ /bin/sh -c /usr/local/bb_local/site/bin/monitor/bb_local.pl > /tmp/bb_local.pl.log 2>&1
+32920   |       \_ /usr/bin/perl /usr/local/bb_local/site/bin/monitor/bb_local.pl
+32981   \_ CROND
+32988   |   \_ /bin/sh -c /admin/code/live_cd.git/site/bin/release/update_code.pl --cron > /tmp/update_code_release.log 2>&1
+32995   |       \_ /usr/bin/perl /admin/code/live_cd.git/site/bin/release/update_code.pl --cron
+32982   \_ CROND
+32994       \_ /bin/sh -c /site/bin/db/dbconfig_local.pl > /tmp/dbconfig_local.log 2>&1
+32998           \_ /usr/bin/perl /site/bin/db/dbconfig_local.pl
+ 1658  /usr/bin/python /usr/bin/supervisord
+ 1671  /sbin/mingetty /dev/tty1
+ 1673  /sbin/mingetty /dev/tty2
+ 1675  /sbin/mingetty /dev/tty3
+ 1677  /sbin/mingetty /dev/tty4
+ 1679  /sbin/mingetty /dev/tty5
+ 1681  /sbin/mingetty /dev/tty6
+ 1847  SCREEN
+ 1848   \_ -bash
+ 1904   \_ -bash
+32999   |   \_ /usr/bin/perl ./ps_tree.pl
+33000   |       \_ ps -e l
+ 1932   \_ -bash
+ 1960   \_ -bash
+ 1988   \_ -bash
+ 2016   \_ -bash
+ 2072   \_ -bash
+11501   \_ -bash
+46860   |   \_ vim ps_tree.pl
+18736   \_ -bash
+51722  /usr/sbin/sshd
+ 8757   \_ sshd: mchan [priv]
+ 8761   |   \_ sshd: mchan@pts/0
+ 8762   |       \_ -bash
+28794   \_ sshd: mchan [priv]
+28796       \_ sshd: mchan@pts/8
+28797           \_ -bash
+28830               \_ screen -r 1847.pts-0.ii95-50322
+[mchan@ii95-50322 (22:46:15) ~/mchan2/test]$
+
+[mchan@ii95-50322 (22:50:53) ~/mchan2/test]$ cat ps_in
+F   UID   PID  PPID PRI  NI    VSZ   RSS WCHAN  STAT TTY        TIME COMMAND
+4     0     1     0  20   0  21324   756 poll_s Ss   ?          0:26 /sbin/init
+1     0     2     0  20   0      0     0 kthrea S    ?          0:00 [kthreadd]
+1     0     3     2 -100  -      0     0 migrat S    ?          0:16 [migration/0]
+1     0     4     2  20   0      0     0 ksofti S    ?          0:34 [ksoftirqd/0]
+1     0     5     2 -100  -      0     0 cpu_st S    ?          0:00 [stopper/0]
+5     0     6     2 -100  -      0     0 watchd S    ?          8:54 [watchdog/0]
+1     0     7     2 -100  -      0     0 migrat S    ?          0:12 [migration/1]
+1     0     8     2 -100  -      0     0 cpu_st S    ?          0:00 [stopper/1]
+1     0     9     2  20   0      0     0 ksofti S    ?          0:30 [ksoftirqd/1]
+5     0    10     2 -100  -      0     0 watchd S    ?          8:55 [watchdog/1]
+1     0    11     2  20   0      0     0 worker S    ?          3:59 [events/0]
+1     0    12     2  20   0      0     0 worker S    ?          3:02 [events/1]
+1     0    13     2  20   0      0     0 worker S    ?          0:00 [cgroup]
+1     0    14     2  20   0      0     0 worker S    ?          0:00 [khelper]
+1     0    15     2  20   0      0     0 worker S    ?          0:00 [netns]
+1     0    16     2  20   0      0     0 async_ S    ?          0:00 [async/mgr]
+1     0    17     2  20   0      0     0 worker S    ?          0:00 [pm]
+1     0    18     2  20   0      0     0 bdi_sy S    ?          0:10 [sync_supers]
+1     0    19     2  20   0      0     0 bdi_fo S    ?          0:13 [bdi-default]
+1     0    20     2  20   0      0     0 worker S    ?          0:00 [kintegrityd/0]
+1     0    21     2  20   0      0     0 worker S    ?          0:00 [kintegrityd/1]
+1     0    22     2  20   0      0     0 worker S    ?          3:14 [kblockd/0]
+1     0    23     2  20   0      0     0 worker S    ?          3:09 [kblockd/1]
+1     0    24     2  20   0      0     0 worker S    ?          0:00 [kacpid]
+1     0    25     2  20   0      0     0 worker S    ?          0:00 [kacpi_notify]
+1     0    26     2  20   0      0     0 worker S    ?          0:00 [kacpi_hotplug]
+1     0    27     2  20   0      0     0 worker S    ?          0:00 [ata_aux]
+1     0    28     2  20   0      0     0 worker S    ?          0:00 [ata_sff/0]
+1     0    29     2  20   0      0     0 worker S    ?          0:00 [ata_sff/1]
+1     0    30     2  20   0      0     0 worker S    ?          0:00 [ksuspend_usbd]
+1     0    31     2  20   0      0     0 hub_th S    ?          0:00 [khubd]
+5     0    32     2  20   0      0     0 serio_ S    ?          0:00 [kseriod]
+1     0    33     2  20   0      0     0 worker S    ?          0:00 [md/0]
+1     0    34     2  20   0      0     0 worker S    ?          0:00 [md/1]
+1     0    35     2  20   0      0     0 worker S    ?          0:00 [md_misc/0]
+1     0    36     2  20   0      0     0 worker S    ?          0:00 [md_misc/1]
+1     0    37     2  20   0      0     0 worker S    ?          0:00 [linkwatch]
+1     0    39     2  20   0      0     0 watchd S    ?          0:01 [khungtaskd]
+1     0    40     2  20   0      0     0 kswapd S    ?          0:03 [kswapd0]
+1     0    41     2  25   5      0     0 ksm_sc SN   ?          0:00 [ksmd]
+1     0    42     2  39  19      0     0 khugep SN   ?          3:16 [khugepaged]
+1     0    43     2  20   0      0     0 worker S    ?          0:00 [aio/0]
+1     0    44     2  20   0      0     0 worker S    ?          0:00 [aio/1]
+1     0    45     2  20   0      0     0 worker S    ?          0:00 [crypto/0]
+1     0    46     2  20   0      0     0 worker S    ?          0:00 [crypto/1]
+1     0    54     2  20   0      0     0 worker S    ?          0:00 [kthrotld/0]
+1     0    55     2  20   0      0     0 worker S    ?          0:00 [kthrotld/1]
+1     0    57     2  20   0      0     0 worker S    ?          0:00 [kpsmoused]
+1     0    58     2  20   0      0     0 worker S    ?          0:00 [usbhid_resumer]
+1     0    59     2  20   0      0     0 worker S    ?          0:00 [deferwq]
+1     0    91     2  20   0      0     0 worker S    ?          0:00 [kdmremove]
+1     0    92     2  20   0      0     0 worker S    ?          0:00 [kstriped]
+1     0   163     2  20   0      0     0 scsi_e S    ?          0:00 [scsi_eh_0]
+1     0   164     2  20   0      0     0 scsi_e S    ?          0:00 [scsi_eh_1]
+1     0   231     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_con/0]
+1     0   232     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_con/1]
+1     0   234     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/0]
+1     0   235     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/1]
+1     0   236     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/0]
+1     0   237     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/1]
+1     0   238     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/0]
+1     0   239     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/1]
+1     0   240     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/0]
+1     0   241     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/1]
+1     0   242     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/0]
+1     0   243     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/1]
+1     0   244     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/0]
+1     0   245     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/1]
+1     0   246     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/0]
+1     0   247     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/1]
+1     0   250     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/0]
+1     0   251     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/1]
+1     0   252     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/0]
+1     0   253     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/1]
+1     0   254     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/0]
+1     0   255     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/1]
+1     0   256     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/0]
+1     0   257     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/1]
+1     0   258     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/0]
+1     0   259     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/1]
+1     0   260     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/0]
+1     0   261     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/1]
+1     0   262     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/0]
+1     0   263     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/1]
+1     0   272     2  20   0      0     0 scsi_e S    ?          0:00 [scsi_eh_2]
+1     0   274     2  20   0      0     0 scsi_e S    ?          0:00 [scsi_eh_3]
+1     0   321     2  20   0      0     0 worker S    ?          0:19 [kdmflush]
+1     0   323     2  20   0      0     0 worker S    ?          0:00 [kdmflush]
+1     0   341     2  20   0      0     0 bdi_wr S    ?          1:07 [flush-253:0]
+1     0   342     2  20   0      0     0 kjourn S    ?          6:42 [jbd2/dm-0-8]
+1     0   343     2  20   0      0     0 worker S    ?          0:00 [ext4-dio-unwrit]
+5     0   422     1  16  -4  10640   456 poll_s S<s  ?          0:00 /sbin/udevd -d
+1     0   615     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/0]
+1     0   616     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/1]
+1     0   620     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/0]
+1     0   621     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/1]
+5     0   688   422  18  -2  10760   448 poll_s S<   ?          0:00 /sbin/udevd -d
+1     0   699     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/0]
+1     0   700     2  20   0      0     0 worker S    ?          0:00 [hv_vmbus_ctl/1]
+5     0   703   422  18  -2  10756   440 poll_s S<   ?          0:00 /sbin/udevd -d
+1     0   722     2  20   0      0     0 kjourn S    ?          0:00 [jbd2/sda1-8]
+1     0   723     2  20   0      0     0 worker S    ?          0:00 [ext4-dio-unwrit]
+1     0   813     2  20   0      0     0 kaudit S    ?          8:24 [kauditd]
+5     0  1103     1  16  -4  27612   564 ep_pol S<sl ?         11:41 auditd
+5    65  1123     1  20   0 453204  2556 futex_ Ssl  ?          0:46 /usr/sbin/nslcd
+5     0  1137     1  20   0 250624  9612 poll_s Sl   ?          4:02 /sbin/rsyslogd -i /var/run/syslogd.pid -c 5
+5    32  1163     1  20   0  19036   572 poll_s Ss   ?          3:00 rpcbind
+5    29  1183     1  20   0  23560   620 poll_s Ss   ?          0:00 rpc.statd
+5    81  1212     1  20   0  23524   216 poll_s Ss   ?          0:00 dbus-daemon --system
+5     0  1265     1  20   0   4920   420 poll_s Ss   ?          1:44 /usr/sbin/hv_kvp_daemon
+1     0  1268     2  20   0      0     0 worker S    ?          0:26 [cqueue]
+5     0  1287     1  20   0   4056   252 poll_s Ss   ?          0:00 /usr/sbin/hv_vss_daemon
+5     0  1307     1  20   0 736268  1804 rt_sig Ssl  ?         22:44 automount --pid-file /var/run/autofs.pid
+5    28  1327     1  20   0 1306124 3684 ep_pol Ssl  ?         20:32 /usr/sbin/nscd
+5    38  1375     1  20   0  25252   952 poll_s Ss   ?          1:05 ntpd -u ntp:ntp -p /var/run/ntpd.pid -g
+4     0  1452     1  20   0  80072   680 ep_pol Ss   ?          1:52 /usr/libexec/postfix/master
+4    89  1462  1452  20   0  80120  1172 ep_pol S    ?          0:17 qmgr -l -t fifo -u
+5     0  1470     2  20   0      0     0 worker S    ?          0:16 [rpciod/0]
+5     0  1471     2  20   0      0     0 worker S    ?          2:53 [rpciod/1]
+1     0  1473     2  15  -5      0     0 slow_w S<   ?          0:00 [kslowd000]
+1     0  1474     2  15  -5      0     0 slow_w S<   ?          0:00 [kslowd001]
+1     0  1475     2  20   0      0     0 worker S    ?          0:29 [nfsiod]
+1     0  1476     2  20   0      0     0 svc_re S    ?          0:00 [lockd]
+5     0  1486     1  20   0 787284  1516 poll_s Ss   ?         89:30 /usr/sbin/httpd -D SSL -D VDEVBOX
+1     0  1567     1  20   0 117068   548 hrtime Sl   ?        1532:25 /opt/SumoCollector/./wrapper /opt/SumoCollector/./config/wrapper.conf wrapper.syslog.ident=collector wrapper.pidfile=/opt/SumoCollector/./collector.pid wrapper.name=collector wrapper.displayname=SumoLogic Collector wrapper.daemonize=TRUE wrapper.statusfile=/opt/SumoCollector/./collector.status wrapper.java.statusfile=/opt/SumoCollector/./collector.java.status wrapper.lockfile=/var/lock/subsys/collector
+0     0  1569  1567  20   0 2677364 239504 futex_ Sl ?        4015:47 /opt/SumoCollector/jre/bin/java -XX:+UseParallelGC -server -Xms64m -Xmx128m -Djava.library.path=./19.209-8/bin/native/lib -classpath ./19.209-8/lib/aether-api-0.9.0.M3.jar:./19.209-8/lib/aether-util-0.9.0.M3.jar:./19.209-8/lib/ant-1.8.4.jar:./19.209-8/lib/ant-launcher-1.8.4.jar:./19.209-8/lib/aopalliance-repackaged-2.4.0-b34.jar:./19.209-8/lib/avro-1.8.1.jar:./19.209-8/lib/avro-ipc-1.8.1.jar:./19.209-8/lib/avrox-19.209-1.jar:./19.209-8/lib/backport-util-concurrent-3.1.jar:./19.209-8/lib/bcpkix-jdk15on-1.54.jar:./19.209-8/lib/bcprov-jdk15on-1.54.jar:./19.209-8/lib/c3p0-0.9.1.1.jar:./19.209-8/lib/classworlds-1.1.jar:./19.209-8/lib/collector-19.209-8.jar:./19.209-8/lib/collector-base-19.209-1.jar:./19.209-8/lib/collector-interchange-19.209-1.jar:./19.209-8/lib/collector-native-19.209-1.jar:./19.209-8/lib/collector-util-19.209-1.jar:./19.209-8/lib/commons-cli-1.2.jar:./19.209-8/lib/commons-codec-1.10.jar:./19.209-8/lib/commons-collections-3.2.2.jar:./19.209-8/lib/commons-compress-1.12.jar:./19.209-8/lib/commons-configuration-1.10.jar:./19.209-8/lib/commons-daemon-1.0.1.jar:./19.209-8/lib/commons-httpclient-3.1.jar:./19.209-8/lib/commons-io-2.4.jar:./19.209-8/lib/commons-lang-2.6.jar:./19.209-8/lib/commons-logging-1.2.jar:./19.209-8/lib/docker-java-3.0.13.jar:./19.209-8/lib/dom4j-1.6.1.jar:./19.209-8/lib/doxia-logging-api-1.1.jar:./19.209-8/lib/doxia-sink-api-1.1.jar:./19.209-8/lib/ecc-25519-java-1.0.1.jar:./19.209-8/lib/guava-16.0.1.jar:./19.209-8/lib/hk2-api-2.4.0-b34.jar:./19.209-8/lib/hk2-locator-2.4.0-b34.jar:./19.209-8/lib/hk2-utils-2.4.0-b34.jar:./19.209-8/lib/httpclient-4.5.2.jar:./19.209-8/lib/httpcore-4.4.4.jar:./19.209-8/lib/install4j-maven-plugin-1.0.7.jar:./19.209-8/lib/jackrabbit-jcr-commons-1.5.0.jar:./19.209-8/lib/jackrabbit-webdav-1.5.0.jar:./19.209-8/lib/jackson-annotations-2.7.2.jar:./19.209-8/lib/jackson-core-2.7.2.jar:./19.209-8/lib/jackson-core-asl-1.9.13.jar:./19.209-8/lib/jackson-databind-2.7.2.jar:./19.209-8/lib/jackson-jaxrs-base-2.6.4.jar:./19.209-8/lib/jackson-jaxrs-json-provider-2.6.4.jar:./19.209-8/lib/jackson-mapper-asl-1.9.13.jar:./19.209-8/lib/jackson-module-jaxb-annotations-2.6.4.jar:./19.209-8/lib/jacob-1.18.jar:./19.209-8/lib/jasypt-1.7.jar:./19.209-8/lib/javassist-3.18.1-GA.jar:./19.209-8/lib/javax.annotation-api-1.2.jar:./19.209-8/lib/javax.inject-2.4.0-b34.jar:./19.209-8/lib/javax.servlet-api-3.1.0.jar:./19.209-8/lib/javax.ws.rs-api-2.0.1.jar:./19.209-8/lib/jcifs-1.3.17.jar:./19.209-8/lib/jcl-over-slf4j-1.7.21.jar:./19.209-8/lib/jersey-apache-connector-2.23.1.jar:./19.209-8/lib/jersey-client-2.23.1.jar:./19.209-8/lib/jersey-common-2.23.1.jar:./19.209-8/lib/jersey-guava-2.23.1.jar:./19.209-8/lib/jinterop-2.0.8.2.jar:./19.209-8/lib/jinterop-deps-2.0.8.2.jar:./19.209-8/lib/jna-3.3.0-platform.jar:./19.209-8/lib/jna-3.3.0.jar:./19.209-8/lib/joda-convert-1.8.1.jar:./19.209-8/lib/joda-time-2.9.3.jar:./19.209-8/lib/jsch-0.1.38.jar:./19.209-8/lib/json4s-ast_2.11-3.4.0-SUMO.jar:./19.209-8/lib/json4s-core_2.11-3.4.0-SUMO.jar:./19.209-8/lib/json4s-native_2.11-3.4.0-SUMO.jar:./19.209-8/lib/json4s-scalap_2.11-3.4.0-SUMO.jar:./19.209-8/lib/jsr305-3.0.1.jar:./19.209-8/lib/junixsocket-common-2.0.4.jar:./19.209-8/lib/junixsocket-native-common-2.0.4.jar:./19.209-8/lib/jzlib-1.1.3.jar:./19.209-8/lib/log4j-1.2.17.jar:./19.209-8/lib/maven-artifact-2.2.1.jar:./19.209-8/lib/maven-artifact-manager-2.2.1.jar:./19.209-8/lib/maven-core-2.2.1.jar:./19.209-8/lib/maven-error-diagnostics-2.2.1.jar:./19.209-8/lib/maven-model-2.2.1.jar:./19.209-8/lib/maven-monitor-2.2.1.jar:./19.209-8/lib/maven-plugin-annotations-3.1.jar:./19.209-8/lib/maven-plugin-api-2.2.1.jar:./19.209-8/lib/maven-plugin-descriptor-2.2.1.jar:./19.209-8/lib/maven-plugin-parameter-documenter-2.2.1.jar:./19.209-8/lib/maven-plugin-registry-2.2.1.jar:./19.209-8/lib/maven-profile-2.2.1.jar:./19.209-8/lib/maven-project-2.2.1.jar:./19.209-8/lib/maven-reporting-api-2.2.1.jar:./19.209-8/lib/maven-repository-metadata-2.2.1.jar:./19.209-8/lib/maven-settings-2.2.1.jar:./19.209-8/lib/metrics-core-3.1.0.jar:./19.209-8/lib/metrics-graphite-3.1.0.jar:./19.209-8/lib/met
+5 65534  1597  1486  20   0 787284   276 ep_pol S    ?          9:01 /usr/sbin/httpd -D SSL -D VDEVBOX
+5 65534  1598  1486  20   0 787284   244 semtim S    ?          0:00 /usr/sbin/httpd -D SSL -D VDEVBOX
+5 65534  1599  1486  20   0 787284   244 semtim S    ?          0:00 /usr/sbin/httpd -D SSL -D VDEVBOX
+5 65534  1600  1486  20   0 787284   244 semtim S    ?          0:00 /usr/sbin/httpd -D SSL -D VDEVBOX
+5 65534  1601  1486  20   0 787284   244 semtim S    ?          0:00 /usr/sbin/httpd -D SSL -D VDEVBOX
+5 65534  1602  1486  20   0 787284   244 semtim S    ?          0:00 /usr/sbin/httpd -D SSL -D VDEVBOX
+5 65534  1604  1486  20   0 787284   244 semtim S    ?          0:00 /usr/sbin/httpd -D SSL -D VDEVBOX
+5 65534  1606  1486  20   0 787284   244 semtim S    ?          0:00 /usr/sbin/httpd -D SSL -D VDEVBOX
+1     0  1649     1  20   0 115476   812 hrtime Ss   ?          4:21 crond
+1     0  1658     1  20   0 197176  1516 poll_s Ss   ?        100:36 /usr/bin/python /usr/bin/supervisord
+4     0  1671     1  20   0   4064   268 n_tty_ Ss+  tty1       0:00 /sbin/mingetty /dev/tty1
+4     0  1673     1  20   0   4064   268 n_tty_ Ss+  tty2       0:00 /sbin/mingetty /dev/tty2
+4     0  1675     1  20   0   4064   268 n_tty_ Ss+  tty3       0:00 /sbin/mingetty /dev/tty3
+4     0  1677     1  20   0   4064   268 n_tty_ Ss+  tty4       0:00 /sbin/mingetty /dev/tty4
+4     0  1679     1  20   0   4064   268 n_tty_ Ss+  tty5       0:00 /sbin/mingetty /dev/tty5
+4     0  1681     1  20   0   4064   268 n_tty_ Ss+  tty6       0:00 /sbin/mingetty /dev/tty6
+5     0  1716  1649  20   0 174404   484 pipe_w S    ?          0:00 CROND
+0     0  1723  1716  20   0 106060   624 wait   Ss   ?          0:00 /bin/sh -c  /admin/code/live_cd.git/site/bin/service/messaging_local_queue.pl > /tmp/messaging_local_queue_startup_log.log 2>&1
+4     0  1731  1723  20   0 632532 154952 poll_s Sl  ?          0:27 /usr/bin/perl /admin/code/live_cd.git/site/bin/service/messaging_local_queue.pl
+1  7480  1847     1  20   0 126932  6704 poll_s Ss   ?          3:23 SCREEN
+0  7480  1848  1847  20   0 106940  1504 n_tty_ Ss+  pts/1      0:00 -bash
+0  7480  1904  1847  20   0 106940  1676 wait   Ss   pts/3      0:01 -bash
+0  7480  1932  1847  20   0 106940  1820 n_tty_ Ss+  pts/4      0:00 -bash
+0  7480  1960  1847  20   0 106940  1628 n_tty_ Ss+  pts/5      0:00 -bash
+0  7480  1988  1847  20   0 106940  1508 n_tty_ Ss+  pts/6      0:00 -bash
+0  7480  2016  1847  20   0 106940  1516 n_tty_ Ss+  pts/7      0:00 -bash
+0  7480  2072  1847  20   0 106940  1544 n_tty_ Ss+  pts/9      0:00 -bash
+4     0  8757 51722  20   0 122256  6616 unix_s Ss   ?          0:00 sshd: mchan [priv]
+5  7480  8761  8757  20   0 122676  3128 poll_s S    ?          0:10 sshd: mchan@pts/0
+0  7480  8762  8761  20   0 106812  2348 n_tty_ Ss+  pts/0      0:00 -bash
+0  7480 11501  1847  20   0 106940  2416 wait   Ss   pts/2      0:00 -bash
+0  7480 18736  1847  20   0 106944  2360 n_tty_ Ss+  pts/10     0:00 -bash
+4     0 28794 51722  20   0 122256  6612 unix_s Ss   ?          0:00 sshd: mchan [priv]
+5  7480 28796 28794  20   0 122256  2544 poll_s S    ?          0:01 sshd: mchan@pts/8
+0  7480 28797 28796  20   0 106844  2340 wait   Ss   pts/8      0:00 -bash
+0  7480 28830 28797  20   0 121132  1412 pause  S+   pts/8      0:00 screen -r 1847.pts-0.ii95-50322
+5     0 32051  1649  20   0 174436  2408 pipe_w S    ?          0:00 CROND
+0     0 32053 32051  20   0 106060  1276 wait   Ss   ?          0:00 /bin/sh -c  /admin/code/live_cd.git/site/bin/service/messaging_file_queue.pl > /tmp/messaging_file_queue_startup_log.log 2>&1
+4     0 32057 32053  20   0 476212 151192 hrtime S   ?          0:59 /usr/bin/perl /admin/code/live_cd.git/site/bin/service/messaging_file_queue.pl
+4    89 32354  1452  20   0  79940  3772 ep_pol S    ?          0:00 pickup -l -t fifo -u
+5     0 32911  1649  20   0 174436  2408 pipe_w S    ?          0:00 CROND
+5     0 32912  1649  20   0 174436  2408 pipe_w S    ?          0:00 CROND
+0     0 32915 32912  20   0 106060  1268 wait   Ss   ?          0:00 /bin/sh -c /usr/local/bb_local/site/bin/monitor/bb_local.pl > /tmp/bb_local.pl.log 2>&1
+0     0 32917 32911  20   0 106060  1268 wait   Ss   ?          0:00 /bin/sh -c /usr/local/bb_local/site/bin/monitor/bb_local.pl --check=nfs > /tmp/bb_local.pl.nfs.log 2>&1
+0     0 32920 32915  20   0 298968 47620 poll_s S    ?          0:03 /usr/bin/perl /usr/local/bb_local/site/bin/monitor/bb_local.pl
+0     0 32926 32917  20   0 298972 47624 sk_wai S    ?          0:02 /usr/bin/perl /usr/local/bb_local/site/bin/monitor/bb_local.pl --check=nfs
+5     0 32981  1649  20   0 174436  2408 pipe_w S    ?          0:00 CROND
+5     0 32982  1649  20   0 174436  2408 pipe_w S    ?          0:00 CROND
+0     0 32988 32981  20   0 106060  1272 wait   Ss   ?          0:00 /bin/sh -c /admin/code/live_cd.git/site/bin/release/update_code.pl --cron > /tmp/update_code_release.log 2>&1
+0     0 32994 32982  20   0 106060  1272 wait   Ss   ?          0:00 /bin/sh -c  /site/bin/db/dbconfig_local.pl > /tmp/dbconfig_local.log 2>&1
+0     0 32995 32988  20   0 462040 99648 ?      R    ?          0:06 /usr/bin/perl /admin/code/live_cd.git/site/bin/release/update_code.pl --cron
+0     0 32998 32994  20   0 526992 123824 ?     R    ?          0:06 /usr/bin/perl /site/bin/db/dbconfig_local.pl
+0  7480 32999  1904  20   0 125508  3460 pipe_w S+   pts/3      0:00 /usr/bin/perl ./ps_tree.pl
+0  7480 33000 32999  20   0 108128  1044 -      R+   pts/3      0:00 ps -e l
+0  7480 46860 11501  20   0 142168  4988 poll_s S+   pts/2      1:12 vim ps_tree.pl
+5     0 51722     1  20   0  64796  1240 poll_s Ss   ?          0:00 /usr/sbin/sshd
+[mchan@ii95-50322 (22:51:10) ~/mchan2/test]$
+
+[mchan@ii95-50322 (22:51:10) ~/mchan2/test]$ cat ps_out1
+  PID COMMAND
+    2 [kthreadd]
+    3  \_ [migration/0]
+    4  \_ [ksoftirqd/0]
+    5  \_ [stopper/0]
+    6  \_ [watchdog/0]
+    7  \_ [migration/1]
+    8  \_ [stopper/1]
+    9  \_ [ksoftirqd/1]
+   10  \_ [watchdog/1]
+   11  \_ [events/0]
+   12  \_ [events/1]
+   13  \_ [cgroup]
+   14  \_ [khelper]
+   15  \_ [netns]
+   16  \_ [async/mgr]
+   17  \_ [pm]
+   18  \_ [sync_supers]
+   19  \_ [bdi-default]
+   20  \_ [kintegrityd/0]
+   21  \_ [kintegrityd/1]
+   22  \_ [kblockd/0]
+   23  \_ [kblockd/1]
+   24  \_ [kacpid]
+   25  \_ [kacpi_notify]
+   26  \_ [kacpi_hotplug]
+   27  \_ [ata_aux]
+   28  \_ [ata_sff/0]
+   29  \_ [ata_sff/1]
+   30  \_ [ksuspend_usbd]
+   31  \_ [khubd]
+   32  \_ [kseriod]
+   33  \_ [md/0]
+   34  \_ [md/1]
+   35  \_ [md_misc/0]
+   36  \_ [md_misc/1]
+   37  \_ [linkwatch]
+   39  \_ [khungtaskd]
+   40  \_ [kswapd0]
+   41  \_ [ksmd]
+   42  \_ [khugepaged]
+   43  \_ [aio/0]
+   44  \_ [aio/1]
+   45  \_ [crypto/0]
+   46  \_ [crypto/1]
+   54  \_ [kthrotld/0]
+   55  \_ [kthrotld/1]
+   57  \_ [kpsmoused]
+   58  \_ [usbhid_resumer]
+   59  \_ [deferwq]
+   91  \_ [kdmremove]
+   92  \_ [kstriped]
+  163  \_ [scsi_eh_0]
+  164  \_ [scsi_eh_1]
+  231  \_ [hv_vmbus_con/0]
+  232  \_ [hv_vmbus_con/1]
+  234  \_ [hv_vmbus_ctl/0]
+  235  \_ [hv_vmbus_ctl/1]
+  236  \_ [hv_vmbus_ctl/0]
+  237  \_ [hv_vmbus_ctl/1]
+  238  \_ [hv_vmbus_ctl/0]
+  239  \_ [hv_vmbus_ctl/1]
+  240  \_ [hv_vmbus_ctl/0]
+  241  \_ [hv_vmbus_ctl/1]
+  242  \_ [hv_vmbus_ctl/0]
+  243  \_ [hv_vmbus_ctl/1]
+  244  \_ [hv_vmbus_ctl/0]
+  245  \_ [hv_vmbus_ctl/1]
+  246  \_ [hv_vmbus_ctl/0]
+  247  \_ [hv_vmbus_ctl/1]
+  250  \_ [hv_vmbus_ctl/0]
+  251  \_ [hv_vmbus_ctl/1]
+  252  \_ [hv_vmbus_ctl/0]
+  253  \_ [hv_vmbus_ctl/1]
+  254  \_ [hv_vmbus_ctl/0]
+  255  \_ [hv_vmbus_ctl/1]
+  256  \_ [hv_vmbus_ctl/0]
+  257  \_ [hv_vmbus_ctl/1]
+  258  \_ [hv_vmbus_ctl/0]
+  259  \_ [hv_vmbus_ctl/1]
+  260  \_ [hv_vmbus_ctl/0]
+  261  \_ [hv_vmbus_ctl/1]
+  262  \_ [hv_vmbus_ctl/0]
+  263  \_ [hv_vmbus_ctl/1]
+  272  \_ [scsi_eh_2]
+  274  \_ [scsi_eh_3]
+  321  \_ [kdmflush]
+  323  \_ [kdmflush]
+  341  \_ [flush-253:0]
+  342  \_ [jbd2/dm-0-8]
+  343  \_ [ext4-dio-unwrit]
+  615  \_ [hv_vmbus_ctl/0]
+  616  \_ [hv_vmbus_ctl/1]
+  620  \_ [hv_vmbus_ctl/0]
+  621  \_ [hv_vmbus_ctl/1]
+  699  \_ [hv_vmbus_ctl/0]
+  700  \_ [hv_vmbus_ctl/1]
+  722  \_ [jbd2/sda1-8]
+  723  \_ [ext4-dio-unwrit]
+  813  \_ [kauditd]
+ 1268  \_ [cqueue]
+ 1470  \_ [rpciod/0]
+ 1471  \_ [rpciod/1]
+ 1473  \_ [kslowd000]
+ 1474  \_ [kslowd001]
+ 1475  \_ [nfsiod]
+ 1476  \_ [lockd]
+    1 /sbin/init
+  422 /sbin/udevd -d
+  688  \_ /sbin/udevd -d
+  703  \_ /sbin/udevd -d
+ 1103 auditd
+ 1123 /usr/sbin/nslcd
+ 1137 /sbin/rsyslogd -i /var/run/syslogd.pid -c 5
+ 1163 rpcbind
+ 1183 rpc.statd
+ 1212 dbus-daemon --system
+ 1265 /usr/sbin/hv_kvp_daemon
+ 1287 /usr/sbin/hv_vss_daemon
+ 1307 automount --pid-file /var/run/autofs.pid
+ 1327 /usr/sbin/nscd
+ 1375 ntpd -u ntp:ntp -p /var/run/ntpd.pid -g
+ 1452 /usr/libexec/postfix/master
+ 1462  \_ qmgr -l -t fifo -u
+32354  \_ pickup -l -t fifo -u
+ 1486 /usr/sbin/httpd -D SSL -D VDEVBOX
+ 1597  \_ /usr/sbin/httpd -D SSL -D VDEVBOX
+ 1598  \_ /usr/sbin/httpd -D SSL -D VDEVBOX
+ 1599  \_ /usr/sbin/httpd -D SSL -D VDEVBOX
+ 1600  \_ /usr/sbin/httpd -D SSL -D VDEVBOX
+ 1601  \_ /usr/sbin/httpd -D SSL -D VDEVBOX
+ 1602  \_ /usr/sbin/httpd -D SSL -D VDEVBOX
+ 1604  \_ /usr/sbin/httpd -D SSL -D VDEVBOX
+ 1606  \_ /usr/sbin/httpd -D SSL -D VDEVBOX
+ 1567 /opt/SumoCollector/./wrapper /opt/SumoCollector/./config/wrapper.conf wrapper.syslog.ident=collector wrapper.pidfile=/opt/SumoCollector/./collector.pid wrapper.name=collector wrapper.displayname=SumoLogic Collector wrapper.daemonize=TRUE wrapper.statusfile=/opt/SumoCollector/./collector.status wrapper.java.statusfile=/opt/SumoCollector/./collector.java.status wrapper.lockfile=/var/lock/subsys/collector
+ 1569  \_ /opt/SumoCollector/jre/bin/java -XX:+UseParallelGC -server -Xms64m -Xmx128m -Djava.library.path=./19.209-8/bin/native/lib -classpath ./19.209-8/lib/aether-api-0.9.0.M3.jar:./19.209-8/lib/aether-util-0.9.0.M3.jar:./19.209-8/lib/ant-1.8.4.jar:./19.209-8/lib/ant-launcher-1.8.4.jar:./19.209-8/lib/aopalliance-repackaged-2.4.0-b34.jar:./19.209-8/lib/avro-1.8.1.jar:./19.209-8/lib/avro-ipc-1.8.1.jar:./19.209-8/lib/avrox-19.209-1.jar:./19.209-8/lib/backport-util-concurrent-3.1.jar:./19.209-8/lib/bcpkix-jdk15on-1.54.jar:./19.209-8/lib/bcprov-jdk15on-1.54.jar:./19.209-8/lib/c3p0-0.9.1.1.jar:./19.209-8/lib/classworlds-1.1.jar:./19.209-8/lib/collector-19.209-8.jar:./19.209-8/lib/collector-base-19.209-1.jar:./19.209-8/lib/collector-interchange-19.209-1.jar:./19.209-8/lib/collector-native-19.209-1.jar:./19.209-8/lib/collector-util-19.209-1.jar:./19.209-8/lib/commons-cli-1.2.jar:./19.209-8/lib/commons-codec-1.10.jar:./19.209-8/lib/commons-collections-3.2.2.jar:./19.209-8/lib/commons-compress-1.12.jar:./19.209-8/lib/commons-configuration-1.10.jar:./19.209-8/lib/commons-daemon-1.0.1.jar:./19.209-8/lib/commons-httpclient-3.1.jar:./19.209-8/lib/commons-io-2.4.jar:./19.209-8/lib/commons-lang-2.6.jar:./19.209-8/lib/commons-logging-1.2.jar:./19.209-8/lib/docker-java-3.0.13.jar:./19.209-8/lib/dom4j-1.6.1.jar:./19.209-8/lib/doxia-logging-api-1.1.jar:./19.209-8/lib/doxia-sink-api-1.1.jar:./19.209-8/lib/ecc-25519-java-1.0.1.jar:./19.209-8/lib/guava-16.0.1.jar:./19.209-8/lib/hk2-api-2.4.0-b34.jar:./19.209-8/lib/hk2-locator-2.4.0-b34.jar:./19.209-8/lib/hk2-utils-2.4.0-b34.jar:./19.209-8/lib/httpclient-4.5.2.jar:./19.209-8/lib/httpcore-4.4.4.jar:./19.209-8/lib/install4j-maven-plugin-1.0.7.jar:./19.209-8/lib/jackrabbit-jcr-commons-1.5.0.jar:./19.209-8/lib/jackrabbit-webdav-1.5.0.jar:./19.209-8/lib/jackson-annotations-2.7.2.jar:./19.209-8/lib/jackson-core-2.7.2.jar:./19.209-8/lib/jackson-core-asl-1.9.13.jar:./19.209-8/lib/jackson-databind-2.7.2.jar:./19.209-8/lib/jackson-jaxrs-base-2.6.4.jar:./19.209-8/lib/jackson-jaxrs-json-provider-2.6.4.jar:./19.209-8/lib/jackson-mapper-asl-1.9.13.jar:./19.209-8/lib/jackson-module-jaxb-annotations-2.6.4.jar:./19.209-8/lib/jacob-1.18.jar:./19.209-8/lib/jasypt-1.7.jar:./19.209-8/lib/javassist-3.18.1-GA.jar:./19.209-8/lib/javax.annotation-api-1.2.jar:./19.209-8/lib/javax.inject-2.4.0-b34.jar:./19.209-8/lib/javax.servlet-api-3.1.0.jar:./19.209-8/lib/javax.ws.rs-api-2.0.1.jar:./19.209-8/lib/jcifs-1.3.17.jar:./19.209-8/lib/jcl-over-slf4j-1.7.21.jar:./19.209-8/lib/jersey-apache-connector-2.23.1.jar:./19.209-8/lib/jersey-client-2.23.1.jar:./19.209-8/lib/jersey-common-2.23.1.jar:./19.209-8/lib/jersey-guava-2.23.1.jar:./19.209-8/lib/jinterop-2.0.8.2.jar:./19.209-8/lib/jinterop-deps-2.0.8.2.jar:./19.209-8/lib/jna-3.3.0-platform.jar:./19.209-8/lib/jna-3.3.0.jar:./19.209-8/lib/joda-convert-1.8.1.jar:./19.209-8/lib/joda-time-2.9.3.jar:./19.209-8/lib/jsch-0.1.38.jar:./19.209-8/lib/json4s-ast_2.11-3.4.0-SUMO.jar:./19.209-8/lib/json4s-core_2.11-3.4.0-SUMO.jar:./19.209-8/lib/json4s-native_2.11-3.4.0-SUMO.jar:./19.209-8/lib/json4s-scalap_2.11-3.4.0-SUMO.jar:./19.209-8/lib/jsr305-3.0.1.jar:./19.209-8/lib/junixsocket-common-2.0.4.jar:./19.209-8/lib/junixsocket-native-common-2.0.4.jar:./19.209-8/lib/jzlib-1.1.3.jar:./19.209-8/lib/log4j-1.2.17.jar:./19.209-8/lib/maven-artifact-2.2.1.jar:./19.209-8/lib/maven-artifact-manager-2.2.1.jar:./19.209-8/lib/maven-core-2.2.1.jar:./19.209-8/lib/maven-error-diagnostics-2.2.1.jar:./19.209-8/lib/maven-model-2.2.1.jar:./19.209-8/lib/maven-monitor-2.2.1.jar:./19.209-8/lib/maven-plugin-annotations-3.1.jar:./19.209-8/lib/maven-plugin-api-2.2.1.jar:./19.209-8/lib/maven-plugin-descriptor-2.2.1.jar:./19.209-8/lib/maven-plugin-parameter-documenter-2.2.1.jar:./19.209-8/lib/maven-plugin-registry-2.2.1.jar:./19.209-8/lib/maven-profile-2.2.1.jar:./19.209-8/lib/maven-project-2.2.1.jar:./19.209-8/lib/maven-reporting-api-2.2.1.jar:./19.209-8/lib/maven-repository-metadata-2.2.1.jar:./19.209-8/lib/maven-settings-2.2.1.jar:./19.209-8/lib/metrics-core-3.1.0.jar:./19.209-8/lib/metrics-graphite-3.1.0.jar:./19.209-8/lib/met
+ 1649 crond
+ 1716  \_ CROND
+ 1723  |   \_ /bin/sh -c  /admin/code/live_cd.git/site/bin/service/messaging_local_queue.pl > /tmp/messaging_local_queue_startup_log.log 2>&1
+ 1731  |       \_ /usr/bin/perl /admin/code/live_cd.git/site/bin/service/messaging_local_queue.pl
+32051  \_ CROND
+32053  |   \_ /bin/sh -c  /admin/code/live_cd.git/site/bin/service/messaging_file_queue.pl > /tmp/messaging_file_queue_startup_log.log 2>&1
+32057  |       \_ /usr/bin/perl /admin/code/live_cd.git/site/bin/service/messaging_file_queue.pl
+32911  \_ CROND
+32917  |   \_ /bin/sh -c /usr/local/bb_local/site/bin/monitor/bb_local.pl --check=nfs > /tmp/bb_local.pl.nfs.log 2>&1
+32926  |       \_ /usr/bin/perl /usr/local/bb_local/site/bin/monitor/bb_local.pl --check=nfs
+32912  \_ CROND
+32915  |   \_ /bin/sh -c /usr/local/bb_local/site/bin/monitor/bb_local.pl > /tmp/bb_local.pl.log 2>&1
+32920  |       \_ /usr/bin/perl /usr/local/bb_local/site/bin/monitor/bb_local.pl
+32981  \_ CROND
+32988  |   \_ /bin/sh -c /admin/code/live_cd.git/site/bin/release/update_code.pl --cron > /tmp/update_code_release.log 2>&1
+32995  |       \_ /usr/bin/perl /admin/code/live_cd.git/site/bin/release/update_code.pl --cron
+32982  \_ CROND
+32994      \_ /bin/sh -c  /site/bin/db/dbconfig_local.pl > /tmp/dbconfig_local.log 2>&1
+32998          \_ /usr/bin/perl /site/bin/db/dbconfig_local.pl
+ 1658 /usr/bin/python /usr/bin/supervisord
+ 1671 /sbin/mingetty /dev/tty1
+ 1673 /sbin/mingetty /dev/tty2
+ 1675 /sbin/mingetty /dev/tty3
+ 1677 /sbin/mingetty /dev/tty4
+ 1679 /sbin/mingetty /dev/tty5
+ 1681 /sbin/mingetty /dev/tty6
+ 1847 SCREEN
+ 1848  \_ -bash
+ 1904  \_ -bash
+32999  |   \_ /usr/bin/perl ./ps_tree.pl
+33001  |       \_ ps -eo pid,command --forest
+ 1932  \_ -bash
+ 1960  \_ -bash
+ 1988  \_ -bash
+ 2016  \_ -bash
+ 2072  \_ -bash
+11501  \_ -bash
+46860  |   \_ vim ps_tree.pl
+18736  \_ -bash
+51722 /usr/sbin/sshd
+ 8757  \_ sshd: mchan [priv]
+ 8761  |   \_ sshd: mchan@pts/0
+ 8762  |       \_ -bash
+28794  \_ sshd: mchan [priv]
+28796      \_ sshd: mchan@pts/8
+28797          \_ -bash
+28830              \_ screen -r 1847.pts-0.ii95-50322
+[mchan@ii95-50322 (22:53:31) ~/mchan2/test]$
